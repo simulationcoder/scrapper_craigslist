@@ -1,3 +1,10 @@
+"""
+Project: Get data from craigslist for a certain topic
+         All the houses within a certain price range and bedrooms in a certain area.
+Created by: Harpreet
+Date: 2018-11-19
+            
+"""
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
