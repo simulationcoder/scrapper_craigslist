@@ -1,6 +1,4 @@
 from selenium import webdriver
-#driver = webdriver.Firefox(executable_path=r'your\path\geckodriver.exe')
-#driver.get('http://inventwithpython.com')
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -19,8 +17,6 @@ class CraiglistScraper(object):
         self.max_price = max_price
         self.radius = radius
         self.url=f"https://{location}.craigslist.ca/search/apa?search_distance={radius}&postal={postal}&max_price={max_price}&max_bedrooms={max_bedrooms}&availabilityMode=0&sale_date=all+dates"
-        #self.url = f"https://{location}.craigslist.org/search/sss?search_distance={radius}&postal={postal}&max_price={max_price}"
-    
         self.driver = webdriver.Firefox()
         self.delay = 3
 
@@ -93,4 +89,4 @@ scraper.load_craigslist_url()
 titles, prices, dates = scraper.extract_post_information()
 print(titles)
 #scraper.extract_post_urls()
-#scraper.quit()
+scraper.quit()
